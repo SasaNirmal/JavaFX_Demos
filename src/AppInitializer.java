@@ -16,11 +16,13 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent parent = FXMLLoader.load(this.getClass().getResource("/view/StudentForm.fxml"));//load the fxml file
-        Scene scene = new Scene(parent);//create a scene
+        Parent studentParent = FXMLLoader.load(this.getClass().getResource("/view/StudentForm.fxml"));//load the fxml file
+        Parent teacherParent = FXMLLoader.load(this.getClass().getResource("view/TeacherForm.fxml"));
+
+        Scene scene = new Scene(teacherParent);//create a scene
 
         primaryStage.setScene(scene);//set the scene to the stage
-        primaryStage.setTitle("Student Form");
+        primaryStage.setTitle("Teacher Form");
         primaryStage.centerOnScreen();
         primaryStage.show();//show the stage
     }

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+<AnchorPane fx:id="rootStudentForm" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
    <children>
       <Label layoutX="225.0" layoutY="26.0" prefHeight="27.0" prefWidth="166.0" text="Student From" underline="true">
          <font>
@@ -59,5 +59,6 @@
       </Button>
       <Button fx:id="btnHide" layoutX="467.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnHideOnAction" prefHeight="26.0" prefWidth="46.0" text="Hide" />
       <Button fx:id="btnShow" layoutX="467.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnShowOnAction" text="Show" />
+      <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back" />
    </children>
 </AnchorPane>

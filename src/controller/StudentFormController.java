@@ -1,9 +1,16 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class StudentFormController {
     public TextField txtStudentName;
@@ -11,6 +18,7 @@ public class StudentFormController {
     public Label lblMassage;
     public Button btnHide;
     public Button btnShow;
+    public AnchorPane rootStudentForm;
 
 
     public void initialize(){
@@ -56,5 +64,16 @@ public class StudentFormController {
         lblMassage.setVisible(true);
         btnShow.setVisible(false);
         btnHide.setVisible(true);
+    }
+
+    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("../view/DashBoard.fxml"));
+        Scene dashBoardScene = new Scene(parent);
+
+        Stage primaryStage = (Stage) this.rootStudentForm.getScene().getWindow();
+
+        primaryStage.setScene(dashBoardScene);
+        primaryStage.setTitle("Dash Board Form");
+        primaryStage.centerOnScreen();
     }
 }

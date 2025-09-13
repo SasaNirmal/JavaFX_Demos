@@ -14,7 +14,7 @@
             <Font name="Arial Black" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="270.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnHelloWorldOnAction" style="-fx-background-color: #26de81; -fx-background-radius: 15px;" text="Enter" textFill="#ece7e7">
+      <Button layoutX="269.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnHelloWorldOnAction" style="-fx-background-color: #26de81; -fx-background-radius: 15px;" text="Enter" textFill="#ece7e7">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
@@ -28,23 +28,23 @@
          </font>
       </TextField>
       <Label layoutX="62.0" layoutY="100.0" prefHeight="27.0" prefWidth="85.0" text="Student Name:" />
-      <TextField fx:id="txtStudentAddress" layoutX="158.0" layoutY="139.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter Your Address">
+      <TextField fx:id="txtStudentAddress" layoutX="157.0" layoutY="175.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter Your Address">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
       </TextField>
-      <Label layoutX="63.0" layoutY="138.0" prefHeight="27.0" prefWidth="94.0" text="Student Address:" />
-      <Button layoutX="412.0" layoutY="101.0" mnemonicParsing="false" onAction="#btnPrintStudentName" text="Enter" textFill="#ff0000af">
+      <Label layoutX="62.0" layoutY="174.0" prefHeight="27.0" prefWidth="94.0" text="Student Address:" />
+      <Button layoutX="291.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnPrintStudentName" text="Enter" textFill="#ff0000af">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="412.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnPrintStudentAdress" text="Enter" textFill="#ff0000af">
+      <Button layoutX="412.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnPrintStudentAdress" text="Enter" textFill="#ff0000af">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="lblMassage" layoutX="138.0" layoutY="235.0" prefHeight="67.0" prefWidth="324.0" style="-fx-background-color: #d1d8e0; -fx-background-radius: 15px;" textAlignment="CENTER" textFill="#383f40">
+      <Label fx:id="lblMassage" layoutX="137.0" layoutY="271.0" prefHeight="67.0" prefWidth="324.0" style="-fx-background-color: #d1d8e0; -fx-background-radius: 15px;" textAlignment="CENTER" textFill="#383f40">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
@@ -52,5 +52,12 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Label>
+      <Button layoutX="217.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnAddStudentName" text="Add Name" textFill="#ff0000af">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnHide" layoutX="467.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnHideOnAction" prefHeight="26.0" prefWidth="46.0" text="Hide" />
+      <Button fx:id="btnShow" layoutX="467.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnShowOnAction" text="Show" />
    </children>
 </AnchorPane>

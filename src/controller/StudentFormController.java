@@ -22,6 +22,7 @@ public class StudentFormController {
 
 
     public void initialize(){
+
         txtStudentName.setDisable(true);
     }
     public void btnPrintStudentName(ActionEvent actionEvent) {

@@ -33,4 +33,14 @@ public class DashBoardController {
         primaaryStage.setTitle("Student Form");
         primaaryStage.centerOnScreen();
     }
+
+    public void btnTableFormOnAction(ActionEvent actionEvent) throws IOException {
+        Parent Parant = FXMLLoader.load(this.getClass().getResource("../view/TableForm.fxml"));
+        Scene TableFormScene = new Scene(Parant);
+
+        Stage primaryStage = (Stage) this.root.getScene().getWindow();
+        primaryStage.setScene(TableFormScene);
+        primaryStage.setTitle("Table Form");
+        primaryStage.centerOnScreen();
+    }
 }

@@ -14,5 +14,6 @@
       </Label>
       <Button layoutX="143.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnStuentFormOnAction" text="Student Form" />
       <Button layoutX="143.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnTeaccherFormAction" text="Teacher Form" />
+      <Button layoutX="143.0" layoutY="223.0" mnemonicParsing="false" onAction="#btnTableFormOnAction" prefHeight="26.0" prefWidth="89.0" text="Table Form" />
    </children>
 </AnchorPane>

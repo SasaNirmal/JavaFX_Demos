@@ -34,7 +34,7 @@
       <Label layoutX="314.0" layoutY="78.0" text="Coustermer NIC:" />
       <Label layoutX="10.0" layoutY="135.0" text="Coustermer Address:" />
       <Label layoutX="21.0" layoutY="97.0" text="Coustermer Name:" />
-      <Button layoutX="112.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnCoustmerAddOnAction" text="Coustmer Add" />
+      <Button fx:id="btnCstmrAd" layoutX="112.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnCoustmerAddOnAction" text="Coustmer Add" />
       <Button layoutX="4.0" layoutY="3.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back" />
    </children>
 </AnchorPane>

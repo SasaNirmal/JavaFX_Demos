@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -24,6 +25,7 @@ public class TableFormController {
     public TextField txtAds;
     public TextField txtNM;
     public AnchorPane rootTbl;
+    public Button btnCstmrAd;
 
     public void initialize(){
         tblCountermenDetails.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("ID"));
@@ -50,6 +52,7 @@ public class TableFormController {
                 txtCntt.setText(selectedItem.getContact());
             }
         });
+        btnCstmrAd.setStyle("-fx-background-color: #f0f0f0");
     }
 
     public void loadStartCoustermerData(){
@@ -70,6 +73,7 @@ public class TableFormController {
 
     public void btnCoustmerAddOnAction(ActionEvent actionEvent) {
 
+        btnCstmrAd.setStyle("-fx-background-color: #32CD32; -fx-text-fill: white;");
         String id = txtID.getText();
         String name = txtNM.getText();
         String address = txtAds.getText();

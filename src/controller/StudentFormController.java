@@ -1,5 +1,9 @@
 package controller;
 
+import Database.DatabaseHandler;
+
+import java.sql.*;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 public class StudentFormController {
     public TextField txtStudentName;
@@ -43,11 +48,23 @@ public class StudentFormController {
     }
 
 
-    public void btnHelloWorldOnAction(ActionEvent actionEvent) {
-        String massage = "Hello "+txtStudentName.getText()+"!,Your Address is "+txtStudentAddress.getText()+".";
-        System.out.println(massage);
-        lblMassage.setText(massage);
+    public void btnHelloWorldOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
 
+        DatabaseHandler connectNow = new DatabaseHandler();
+        Connection connectDB = connectNow.getDbConnection();
+
+        String connectQuery = "SELECT name FROM student";
+
+        try {
+            Statement statement = connectDB.createStatement();
+            ResultSet resultSet = statement.executeQuery(connectQuery);
+
+            while(resultSet.next()){
+                lblMassage.setText(resultSet.getString("name"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void btnAddStudentName(ActionEvent actionEvent) {

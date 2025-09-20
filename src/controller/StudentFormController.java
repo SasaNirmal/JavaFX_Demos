@@ -53,14 +53,17 @@ public class StudentFormController {
         DatabaseHandler connectNow = new DatabaseHandler();
         Connection connectDB = connectNow.getDbConnection();
 
-        String connectQuery = "SELECT name FROM student";
+        String connectQuery = "SELECT * FROM javafx_demo.student";
 
         try {
             Statement statement = connectDB.createStatement();
             ResultSet resultSet = statement.executeQuery(connectQuery);
 
             while(resultSet.next()){
-                lblMassage.setText(resultSet.getString("name"));
+                String address = resultSet.getString("address");
+                String name = resultSet.getString("name");
+
+                lblMassage.setText("Hello "+name+" Your Address is "+address);
             }
         } catch (SQLException e) {
             e.printStackTrace();
